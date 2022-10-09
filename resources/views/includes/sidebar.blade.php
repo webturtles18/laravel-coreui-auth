@@ -1,53 +1,30 @@
-<div class="d-flex flex-column flex-shrink-0 p-3 bg-light" style="width: 280px;">
-    <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-dark text-decoration-none">
-        <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"/></svg>
-        <span class="fs-4">Sidebar</span>
-    </a>
-    <hr>
-    <ul class="nav nav-pills flex-column mb-auto">
+<div class="sidebar sidebar-dark sidebar-fixed" id="sidebar">
+  <div class="sidebar-brand d-none d-md-flex">
+    {{-- Full Logo - 118 x 46 --}}
+    {{-- Small Logo - 45 x 46 --}}
+  </div>
+  <ul class="sidebar-nav" data-coreui="navigation" data-simplebar="">
+    <li class="nav-item">
+      <a class="nav-link" href="index.html">
+        <i class="nav-icon fa fa-fw fa-solid fa-house"></i> Dashboard
+        {{-- <span class="badge badge-sm bg-info ms-auto">NEW</span> --}}
+      </a>
+    </li>
+    {{-- <li class="nav-title">Title</li> // navigation title --}}
+    {{-- Navigation group --}}
+    {{-- <li class="nav-group">
+      <a class="nav-link nav-group-toggle" href="#">
+        <i class="nav-icon fa fa-fw fa-solid fa-house"></i> Group
+      </a>
+      <ul class="nav-group-items">
         <li class="nav-item">
-            <a href="#" class="nav-link active" aria-current="page">
-                <svg class="bi me-2" width="16" height="16"><use xlink:href="#home"/></svg>
-                Home
-            </a>
+          <a class="nav-link" href="base/accordion.html"><span class="nav-icon"></span> Accordion</a>
         </li>
-        <li>
-            <a href="#" class="nav-link link-dark">
-                <svg class="bi me-2" width="16" height="16"><use xlink:href="#speedometer2"/></svg>
-                Dashboard
-            </a>
+        <li class="nav-item">
+          <a class="nav-link" href="base/breadcrumb.html"><span class="nav-icon"></span> Breadcrumb</a>
         </li>
-        <li>
-            <a href="#" class="nav-link link-dark">
-                <svg class="bi me-2" width="16" height="16"><use xlink:href="#table"/></svg>
-                Orders
-            </a>
-        </li>
-        <li>
-            <a href="#" class="nav-link link-dark">
-                <svg class="bi me-2" width="16" height="16"><use xlink:href="#grid"/></svg>
-                Products
-            </a>
-        </li>
-        <li>
-            <a href="#" class="nav-link link-dark">
-                <svg class="bi me-2" width="16" height="16"><use xlink:href="#people-circle"/></svg>
-                Customers
-            </a>
-        </li>
-    </ul>
-    <hr>
-    <div class="dropdown">
-        <a href="#" class="d-flex align-items-center link-dark text-decoration-none dropdown-toggle" id="dropdownUser2" data-bs-toggle="dropdown" aria-expanded="false">
-            <img src="https://github.com/mdo.png" alt="" width="32" height="32" class="rounded-circle me-2">
-            <strong>mdo</strong>
-        </a>
-        <ul class="dropdown-menu text-small shadow" aria-labelledby="dropdownUser2">
-            <li><a class="dropdown-item" href="#">New project...</a></li>
-            <li><a class="dropdown-item" href="#">Settings</a></li>
-            <li><a class="dropdown-item" href="#">Profile</a></li>
-            <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="#">Sign out</a></li>
-        </ul>
-    </div>
+      </ul>
+    </li> --}}
+  </ul>
+  <button class="sidebar-toggler" type="button" data-coreui-toggle="unfoldable"></button>
 </div>
