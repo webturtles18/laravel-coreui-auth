@@ -5,10 +5,17 @@ composer install
 ```
 
 -   Copy .env.example to .env
--   set database configuration in .env
+-   Set database configuration in .env
 
 ```
 DB_DATABASE=<db-name>
+php artisan migrate
+```
+
+-   Generate key
+
+```
+php artisan key:generate
 ```
 
 -   https://coreui.io/docs/getting-started/introduction/

@@ -6,7 +6,7 @@
         <div class="card-body">
           <form action="{{ route('login') }}" method="POST">
             @csrf
-            <h1>Login</h1>
+            <h3>Login</h3>
             <p class="text-medium-emphasis">Sign In to your account</p>
             <div class="input-group mb-3">
               <span class="input-group-text">
@@ -25,7 +25,7 @@
                 <button class="btn btn-primary px-4" type="submit">Login</button>
               </div>
               <div class="col-6 text-end">
-                <a href="{{ route('register') }}">Forgot password?</a>
+                <a href="{{ route('password.forgot') }}">Forgot password?</a>
               </div>
             </div>
           </form>

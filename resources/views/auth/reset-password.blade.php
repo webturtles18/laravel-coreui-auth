@@ -5,21 +5,11 @@
       <div class="card mx-4 mb-4">
         <div class="card-body p-4">
           @include('includes.message')
-          <form action="{{ route('register') }}" method="POST">
+          <form action="{{ route('password.update') }}" method="POST">
             @csrf
-            <h3>Register</h3>
-            <div class="input-group mb-3">
-              <span class="input-group-text">
-                <i class="fa fa-fw fa-solid fa-user"></i>
-              </span>
-              <input type="text" name="name" value="{{ old('name') }}" class="form-control" placeholder="Name">
-            </div>
-            <div class="input-group mb-3">
-              <span class="input-group-text">
-                <i class="fa fa-fw fa-solid fa-envelope"></i>
-              </span>
-              <input type="email" name="email" value="{{ old('email') }}" class="form-control" placeholder="Email">
-            </div>
+            <!-- Password Reset Token -->
+            <input type="hidden" name="token" value="{{ $request->route('token') }}">
+            <h3>Reset Password</h3>
             <div class="input-group mb-3">
               <span class="input-group-text">
                 <i class="fa fa-fw fa-solid fa-lock"></i>
@@ -34,15 +24,11 @@
                 placeholder="Confirm password">
             </div>
             <div class="row">
-              <div class="me-auto col-auto">
-                <a href="{{ route('login') }}">Have account already?</a>
-              </div>
-              <div class="col-auto">
-                <button class="btn btn-block btn-primary" type="submit">Create Account</button>
+              <div class="ms-auto col-auto">
+                <button class="btn btn-block btn-primary" type="submit">Reset Password</button>
               </div>
             </div>
           </form>
-
         </div>
       </div>
     </div>
