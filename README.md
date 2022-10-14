@@ -1,5 +1,7 @@
 # Laravel + CoreUI + Auth boilerplate
 
+## Installation
+
 ```
 composer install
 ```
@@ -18,12 +20,14 @@ php artisan migrate
 php artisan key:generate
 ```
 
--   https://coreui.io/docs/getting-started/introduction/
--   https://coreui.io/demos/bootstrap/4.2/free/
--   https://fontawesome.com/icons/house?s=solid&f=classic
-
 ## Screenshots
 
 <img src="./screenshots/login.png" width="300">
 <img src="./screenshots/register.png" width="300">
 <img src="./screenshots/dashboard.png" width="300">
+
+## Reference
+
+-   https://coreui.io/docs/getting-started/introduction/
+-   https://coreui.io/demos/bootstrap/4.2/free/
+-   https://fontawesome.com/icons/house?s=solid&f=classic
