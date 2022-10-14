@@ -29,14 +29,14 @@ Route::middleware('guest')->group(function () {
 });
 
 Route::middleware('auth')->group(function () {
-    Route::get('verify-email', [VerifyEmailController::class, '__invoke'])
+    Route::get('verify-email', [VerifyEmailController::class, 'verifyNotice'])
         ->name('verification.notice');
 
-    Route::get('verify-email/{id}/{hash}', [VerifyEmailController::class, '__invoke'])
+    Route::get('verify-email/{id}/{hash}', [VerifyEmailController::class, 'verifyEmail'])
         ->middleware(['signed', 'throttle:6,1'])
         ->name('verification.verify');
 
-    Route::post('email/verification-notification', [VerifyEmailController::class, 'store'])
+    Route::post('email/verification-notification', [VerifyEmailController::class, 'verifyEmailSend'])
         ->middleware('throttle:6,1')
         ->name('verification.send');
 
